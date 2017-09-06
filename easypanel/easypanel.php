@@ -101,7 +101,7 @@ function easypanel_update_account($params,$edit)
     		}
     }
     //$whmCall->addParam('port',$params['configoption18']);
-	$whmCall->addParam('port',($params["configoption18"] == 'on'?"80":"80,443s"));
+	$whmCall->addParam('port',($params["configoption18"] == 'on'?"80,443s":"80"));
 	if(!empty($params['configoption19'])){
 		$whmCall->addParam('cron',$params['configoption19']);
 	}

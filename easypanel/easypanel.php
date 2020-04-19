@@ -94,9 +94,10 @@ function easypanel_update_account($params,$edit)
     			$k = explode('=',$params["configoption17"]);
     			if (is_array($k)) {
     				if ($k[0]=='c' || $k[0]=='a' || $k[0] == 's' || $k[0] == 'r') {
-    					continue;
-    				}
-    				$whmCall->addParam($k[0],$k[1]);
+						//continue;
+					}else{
+						$whmCall->addParam($k[0],$k[1]);
+					}
     			}
     		}
     }
